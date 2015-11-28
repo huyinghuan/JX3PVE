@@ -32,7 +32,7 @@ function errormessage(id, msg) {
 
 function addFormEvent(formid, focus){
 	var si = 0;
-	var formNode = $(formid).getElementsByTagName('input');
+	var formNode = document.getElementById(formid).getElementsByTagName('input');
 	for(i = 0;i < formNode.length;i++) {
 		if(formNode[i].name == '') {
 			formNode[i].name = formNode[i].id;
@@ -203,7 +203,7 @@ function emailMenuOp(op, e, id) {
                         doane(e);
         	}
 	} else if(op == 5) {
-                var as = $('emailmore_menu').getElementsByTagName('a');
+                var as = document.getElementById('emailmore_menu').getElementsByTagName('a');
                 for(i = 0;i < as.length;i++){
                         as[i].className = '';
                 }
@@ -259,7 +259,7 @@ function emailMenu(e, id) {
 }
 
 function checksubmit() {
-	var p_chks = $('registerform').getElementsByTagName('kbd');
+	var p_chks = document.getElementById('registerform').getElementsByTagName('kbd');
 	for(i = 0;i < p_chks.length;i++){
 		if(p_chks[i].className == 'p_chk'){
 			p_chks[i].innerHTML = '';
