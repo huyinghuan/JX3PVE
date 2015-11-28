@@ -1,21 +1,23 @@
-<div id="comment" class="c-cmt bm portal-cmt">
-	<div class="c-cmt-header bm_h cl">
-		<!--{if $data[commentnum]}--><a href="$common_url" class="xi2 fr">{lang view_all_comments}(<em id="_commentnum">$data[commentnum]</em>)</a><!--{/if}-->
-		<h3 class="portal-pbcmt">发表评论</h3>
+<div class="c-cmt" id="comment">
+
+	<div class="c-cmt-header">
+		<h3>发表评论</h3>
+		<!--{if $data[commentnum]}--><a href="$common_url" class="all">{lang view_all_comments}(<em id="_commentnum">$data[commentnum]</em>)</a><!--{/if}-->
 	</div>
-	<div class="c-cmt-top bm_c" id="comment_ul">
+
+	<div class="c-cmt-top" id="comment_ul">
 		<!--{if !$data[htmlmade]}-->
 			<form id="cform" name="cform" action="$form_url" method="post" autocomplete="off">
 				
 				<div class="c-cmt-avt portal-cmtavt">
-					<a href="http://www.jx3pve.com/home.php" title="{lang myos}">
-						<img class="portal-cmtavt-me" src="http://www.jx3pve.com/uc_server/avatar.php?uid=$_G[uid]&size=big" />
+					<a class="avatar" href="./home.php" title="{lang myos}">
+						<img src="http://www.jx3pve.com/uc_server/avatar.php?uid=$_G[uid]&size=middle" />
 					</a>
 				</div>
 
-				<div class="c-cmt-textarea tedt portal-cmtbox">
+				<div class="c-cmt-textarea portal-cmtbox">
 					<div class="area">
-						<textarea name="message" class="portal-cmtarea" rows="3" class="pt" id="message" onkeydown="ctrlEnter(event, 'commentsubmit_btn');"></textarea>
+						<textarea class="portal-cmtarea" name="message" rows="3" class="pt" id="message" onkeydown="ctrlEnter(event, 'commentsubmit_btn');"></textarea>
 					</div>
 				</div>
 				<!--{if $secqaacheck || $seccodecheck}-->
@@ -36,17 +38,16 @@
 				<input type="hidden" name="replysubmit" value="true">
 				<input type="hidden" name="commentsubmit" value="true" />
 
-				<p class="ptn">
+				<div class="c-cmt-publish ptn">
 					<button class="c-cmt-pub portal-cmbt" type="submit" name="commentsubmit_btn" id="commentsubmit_btn" value="true">发布</button>
-				</p>
+				</div>
 			</form>
 		<!--{/if}-->
-
 	</div>
 		
 	<div class="c-cmt-content">
 		<!--{loop $commentlist $comment}-->
-		<!--{template portal/comment_li}-->
+		<!--{template portal/portal_comment_li}-->
 		<!--{if !empty($aimgs[$comment[cid]])}-->
 			<script type="text/javascript" reload="1">aimgcount[{$comment[cid]}] = [<!--{echo implode(',', $aimgs[$comment[cid]]);}-->];attachimgshow($comment[cid]);</script>
 		<!--{/if}-->
@@ -54,6 +55,9 @@
 		<!--{if !empty($pricount)}-->
 			<p class="mtn mbn y">{lang hide_portal_comment}</p>
 		<!--{/if}-->
-		<!--{if $data[commentnum]}--><p class="ptm pbm"><a href="$common_url" class="xi2">{lang view_all_comments}(<em id="_commentnum">$data[commentnum]</em>)</a></p><!--{/if}-->
+		<!--{if $data[commentnum]}-->
+		<p class="c-cmt-morecmt ptm pbm">
+			<a href="$common_url" class="xi2">{lang view_all_comments}(<em id="_commentnum">$data[commentnum]</em>)</a>
+		</p><!--{/if}-->
 	</div>	
 </div>

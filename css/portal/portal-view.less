@@ -1,41 +1,43 @@
-	/* 门户单页通栏*/
-	#nv_forum .ct2 .mn{width:100%;margin:0 auto;float:none;}
-	#nv_forum .sd{display:none;}
-	.vw .d {color:#444;}
-	.ct2 .mn.single{width:100%;float:none;}
-	.bm.vw{border:none;}
-	h1.ph{font-family:'Microsoft YaHei','Hiragino Sans GB','STHeiti',Tahoma,'SimHei',sans-serif;font-weight:bold;color:#222;}
-	#article_content span {font-size:14px !important;letter-spacing:0.5px;line-height:24px !important;}
-	#article_content {font-family:'宋体',Tahoma,'Microsoft YaHei' !important;}
-	.pren.pbm.cl {display:none;} /*上下篇*/
-	.vw .d img  {max-width:1000px !important;}
-	#article_content  > .blockcode{font-size:8px;font-family:Tahoma;color:#67a003 !important;width:90%;}
+.portal-primary{
+	.m-top{
+		padding:10px;
+		.m-info{
+			.color(#888,#888,#555);.x;
+		}
+	}
 
+	.m-content{
+		.fz(13px,2);
+		.color(#444,#222,#c00);
+		padding:10px;
+		a{
+			text-decoration:underline;
+		}
+		img{
+			max-width:95%;
+			padding:5px;
+			border:1px solid #ddd;
+			.r(6px);
+			margin:10px;
+		}
+	}
 
-	
-	.news_primarys,.news_primary .vw .d{line-height:24px;font-size:12px;font-family:宋体;}
-	.news_primary img{margin:0 auto;}
-	.news_primary p.xg1{padding:10px 0;}
+	.m-panel{
+		border-top:1px dashed #ddd;
+		.clearfix;
+		.m-share{
+			.fl;
+		}
+		.m-extend{
+			.fr;
+		}
+	}
 
-	.news_primary .h.hm{position:relative;margin-bottom:10px;}
-	.news_share1{position:absolute;right:0;top:7px;}
-	.news_share2{float:right;margin-left:10px;position:relative;top:-1px;}
-	.news_primary .oshr{border:none;}
-
-	.news_primary .portal-focus-cmt #comment.bm{border-left:1px solid #aad3ea; border-right:1px solid #aad3ea; border-radius:4px;}
-	.news_primary .portal-focus-cmt  dl.bbda.cl{line-height:24px !important;}
-	.news_primary .portal-cmt-libox{height:auto !important;}
-	.news_primary .mbm{margin-bottom:5px !important;}
-	.news_primary .vw .h{border-bottom:none;}
-
-	.news_primary .vw .d {color: #555;}
-	.news_primary #article_content a{background:url("@{url}/page/portal-list/link.png") no-repeat right top;padding-right:8px;color:#0278bb;}
-	.news_primary #article_content a:hover{color:#000;}
-	#imgzoom{background:#fff;border-radius:4px;line-height:28px;padding:10px 5px 22px 5px;}
-	#imgzoom .y a{padding-right:10px;}
-	#imgzoom .imgzoom_title{padding-top:5px;}
-
-	.news_primary .portal-cmt .bm_h{border-top:1px solid #C2D5E3;}
-
-
-	#chs_bannerArea{width:1140px;margin:10px auto 0 auto;}
+	.pren{
+		.fz(12px,2);
+		.color(#666,#666,@bluex);
+		em{.db;}
+		border-bottom:1px dashed #ddd;
+		margin-bottom:10px;
+	}
+}
