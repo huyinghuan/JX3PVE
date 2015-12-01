@@ -1,16 +1,14 @@
 //module box
 .s-filter{
-    
+    *{filter:none !important;}
 }
 
 //module wrapper
 .s-filter-box{
-
 }
 
 //module type - wrapper
 .s-filter-font{
-
 }
 
 //module title
@@ -38,12 +36,14 @@
     .value{
         .fl;
         .db;.u-btn-gray(a);
+        .pr;
         border-radius:3px;
         .h(26px);.x;
-        .clip;padding:0;
+        padding:0;
         min-width:120px;
         user-select:none;
         transition:0.1s ease-in-out;
+        overflow:visible;
         
         &:hover{
             box-shadow: 0 0 5px #ccc;
@@ -61,6 +61,9 @@
             .u-btn-gray(a);
             padding:0;
             box-shadow: 2px 2px 10px #ccc;
+            .pa;.lt(0,100%);.z(20);
+            .w(100%);box-sizing:border-box;
+            .none;
             //margin-top:26px;
             li{
                 margin:0 8px;
@@ -76,16 +79,16 @@
         }
 
         &.active{
-            overflow:visible;
-            position: relative;
-            z-index: 10;
+            .extend{
+                .db;
+            }
         }
     }
 }
 
 //服务器列表模式一
 .u-fwq-1{
-    .w(800px);
+    .w(800px) !important;
     padding:20px;
     li{
         .fl;
