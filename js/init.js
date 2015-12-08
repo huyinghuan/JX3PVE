@@ -17,7 +17,9 @@ H.load([
 	{'editor':head_conf.CDNROOT+'mod/editor.js'},
 	{'widget':head_conf.ROOT+'mod/widget.js'},
 	{'sfilter':head_conf.ROOT+'mod/sfilter.js'},
-    {'template':head_conf.CDNROOT+'lib/template.js'}
+    {'template':head_conf.CDNROOT+'lib/template.js'},
+    {'color':head_conf.CDNROOT+'lib/color.all.min.js'},
+    {'jqColor':head_conf.CDNROOT+'lib/jqColor.js'}
 ])
 
 //全局设置
