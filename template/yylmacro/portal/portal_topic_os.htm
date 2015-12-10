@@ -34,7 +34,7 @@
 				<span class="status">
 					<label>会员组</label>
 					<!-- 输出当前会员组名称 -->
-					<span class="amount"><!--{eval echo $_G['member']['grouptitle'];}--></span>
+					<span class="amount">$_G[group][grouptitle]</span>
 				</span>
 				</a>
 			</li>
@@ -74,7 +74,7 @@
 			</li>
 		</ul> -->
 		<ul class="vip-m-list vip-m-list-txt">
-			<li>
+			<li class="none">
 				<!-- 已签到后添加.closeunit样式名 -->
 				<a class="closeunit" href="javascript:void(0)" data-login="./login_m">
 					<label>签到</label>
@@ -82,7 +82,7 @@
 					<span class="amount zero">已签到</span>
 				</a>
 			</li>
-			<li>
+			<li class="none">
 				<!-- 已绑定后添加.closeunit样式名 -->
 				<a class="closeunit" href="javascript:void(0)" data-login="./login_m">
 					<label>绑定微信</label>
