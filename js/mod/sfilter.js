@@ -40,7 +40,22 @@ H.ready(['jquery'], function(){
     		//插入求值
     		var $default_key = $(this).find('.default em')
     		$default_key.text(default_key)
-    	})
+    	});
+
+        //服务器筛选重排
+        var $fwq = $("#u-fwq-filter")
+        var daqu = '<span><a href="javascript:void(0)">电信一区</a></span><span><a href="javascript:void(0)">电信二区</a></span><span><a href="javascript:void(0)">电信三区</a></span><span><a href="javascript:void(0)">电信四区</a></span><span><a href="javascript:void(0)">电信五区</a></span><span><a href="javascript:void(0)">电信六区</a></span><span><a href="javascript:void(0)">电信七区</a></span><span><a href="javascript:void(0)">电信八区</a></span><span><a href="javascript:void(0)">网通一二区</a></span><span><a href="javascript:void(0)">网通三区</a></span><hr/>';
+        $fwq.children('li').hide()
+        $fwq.prepend(daqu)
+        $fwq.find('span').on('click',function(e){
+            e.stopPropagation()
+            var which = $(this).text()
+            var which = '#u-fwq-filter li:contains("' + which + '")'
+            $fwq.children('hr').show()
+            $fwq.children('li').hide()
+            $(which).show()
+        })
+
 		
     })
 })
