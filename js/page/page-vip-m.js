@@ -33,6 +33,23 @@ jQuery(function($) {
         $nocoins.hide();
         return true;
     }
+
+    //判断过期时间添加样式
+    (function(){
+      if($("span.govip")[0]){return;}
+      if(!$("span.amount")[0]){return;}
+      var date = $("span.amount").text().replace(/\s/g, "");
+      var year = parseInt(date.substr(0, 4));
+      var month = parseInt(date.substr(0, 4));
+      var day = parseInt(date.substr(8,2));
+      if(isNaN(year) || isNaN(month) || isNaN(day)){return;}
+      var D = new Date(year, month, day);
+      var T = new Date();
+      
+      if((t.getTime() - D.getTime()) < 864000000){
+        $("span.amount").addClass("tobeexpired");
+      }
+    })();
     
     //切换时间
     $(".m-days").find('label').click(function(){
